@@ -1,0 +1,103 @@
+/* Estilos gerais */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Cards */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.confirmation-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.edit-card {
+  border-left: 5px solid #2575fc;
+}
+
+/* Cores de fundo gradientes */
+.bg-custom-primary {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.bg-custom-secondary {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-custom-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-custom-danger {
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+}
+
+/* Cores de texto */
+.text-custom-primary {
+  color: #6a11cb;
+}
+
+.text-custom-danger {
+  color: #ff4b2b;
+}
+
+.text-custom-success {
+  color: #11998e;
+}
+
+/* Botões */
+.btn-custom {
+  border: none;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+}
+
+.btn-custom:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.btn-custom-danger {
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  border: none;
+  color: white;
+}
+
+.btn-custom-danger:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.btn-custom-actualizing {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 50rem;
+}
+
+.btn-click-effect {
+  transition: all 0.2s ease;
+  transform: translateY(0);
+}
+
+.btn-click-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-click-effect:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulários */
+.form-control:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+}
