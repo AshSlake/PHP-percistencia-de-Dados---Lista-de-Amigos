@@ -42,17 +42,15 @@ require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\cabecalho.php'); // In
     // ==============================================
     if ($linha && !empty($linha) && $senha == $linha['senha']) {
         // Autenticação bem-sucedida
-        echo '
-        <a href="http://localhost/etec%20ds/agenda%20%236/app/index.php">
-            <h1 class="w3-button w3-teal">' . htmlspecialchars($nome) . ', seja bem-vindo(a)!</h1>
-        </a>
-        ';
-
         /** 
          * @var string $_SESSION['logado'] Armazena o nome do usuário na sessão
          * @todo Recomendado armazenar ID do usuário ao invés do nome
          */
         $_SESSION['logado'] = $nome;
+
+        /**
+         * @var string redirecionar para a pagina inicial*/
+        header('location:http://localhost/etec%20ds/agenda%20%236/app/index.php');
     } else {
         // Falha na autenticação
         echo '
