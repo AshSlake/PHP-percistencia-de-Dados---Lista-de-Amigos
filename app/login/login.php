@@ -7,58 +7,50 @@
  * 
  * @package SistemaDeLogin
  * @subpackage Views
- * @version 1.0
+ * @version 2.0
  */
-require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\cabecalho.php'); // Inclui o cabeçalho padrão do sistema
+require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\cabecalho.php');
 ?>
 
-<!-- Container index do formulário -->
-<div class="w3-container w3-round-xxlarge w3-display-middle w3-card-4 w3-third">
+<!-- Container principal com classes atualizadas -->
+<div class="login-container bg-white rounded-4 shadow-lg p-4 mx-auto" style="width: 32%; margin-top: 5%;">
 
     <!-- Seção do avatar/logo -->
-    <div class="w3-center">
-        <br>
+    <div class="text-center mb-4">
         <?php
-        /**
-         * Exibe o avatar do usuário
-         * @var string $avatarUrl URL da imagem de perfil
-         * @todo Substituir por imagem local (melhor performance e segurança)
-         */
-        $avatarUrl = "https://e7.pngegg.com/pngimages/122/453/png-clipart-computer-icons-user-profile-avatar-female-profile-heroes-head.png";
-        echo '<img src="' . htmlspecialchars($avatarUrl) . '" alt="Ícone de perfil" style="width:40%" class="w3-circle w3-margin-top">';
+        $avatarUrl = "https://i.pinimg.com/736x/ac/e8/5b/ace85b5cb35dda3651f8f39c08c8f206.jpg";
+        echo '<img src="' . htmlspecialchars($avatarUrl) . '" alt="Ícone de perfil" class="avatar-img rounded-circle">';
         ?>
     </div>
 
     <!-- Formulário de Login -->
-    <form action="loginAction.php" method="post" class="w3-container">
-        <div class="w3-section">
-
+    <form action="loginAction.php" method="post">
+        <div class="mb-3">
             <!-- Campo Usuário -->
-            <label style="font-weight:bold;">Usuário</label>
+            <label class="form-label fw-bold">Usuário</label>
             <input type="text"
-                class="w3-input w3-border w3-margin-bottom"
+                class="form-control input-field mb-3"
                 placeholder="Digite o usuário"
                 name="txtUsuario"
                 required>
+
             <!-- Campo Senha -->
-            <label style="font-weight:bold;">Senha</label>
+            <label class="form-label fw-bold">Senha</label>
             <input type="password"
-                class="w3-input w3-border w3-margin-bottom"
+                class="form-control input-field mb-4"
                 placeholder="Digite a senha"
                 name="txtSenha"
                 required>
 
-            <!-- Botão de Submit -->
-            <button class="w3-button w3-block w3-teal w3-section w3-padding"
-                type="submit">Login</button>
+            <!-- Botão de Submit com efeitos -->
+            <button class="btn btn-primary btn-login w-100 py-2 btn-click-effect"
+                type="submit">
+                <i class="fas fa-sign-in-alt me-2"></i>Login
+            </button>
         </div>
     </form>
-    <br>
 </div>
 
 <?php
-/**
- * Inclui o rodapé padrão do sistema
- */
 require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\rodape.php');
 ?>

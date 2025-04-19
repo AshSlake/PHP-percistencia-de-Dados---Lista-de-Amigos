@@ -1,9 +1,22 @@
-/* Estilos gerais */
+/* ======================
+   VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ====================== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --danger-gradient: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  --primary-color: #6a11cb;
+  --success-color: #11998e;
+  --danger-color: #ff4b2b;
+}
+
 body {
   background-color: #f8f9fa;
 }
 
-/* Cards */
+/* ======================
+     COMPONENTES DE CARDS
+     ====================== */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -22,57 +35,62 @@ body {
   border-left: 5px solid #2575fc;
 }
 
-/* Cores de fundo gradientes */
+/* ======================
+     CORES E BACKGROUNDS
+     ====================== */
 .bg-custom-primary {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: var(--primary-gradient);
 }
 
-.bg-custom-secondary {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-}
-
+.bg-custom-secondary,
 .bg-custom-success {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: var(--success-gradient);
 }
 
 .bg-custom-danger {
-  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  background: var(--danger-gradient);
 }
 
-/* Cores de texto */
 .text-custom-primary {
-  color: #6a11cb;
+  color: var(--primary-color);
 }
 
 .text-custom-danger {
-  color: #ff4b2b;
+  color: var(--danger-color);
 }
 
 .text-custom-success {
-  color: #11998e;
+  color: var(--success-color);
 }
 
-/* Botões */
-.btn-custom {
+/* ======================
+     COMPONENTES DE FORMULÁRIO
+     ====================== */
+.input-field {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px 15px;
+  transition: all 0.3s;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+}
+
+/* ======================
+     BOTÕES
+     ====================== */
+.btn-custom,
+.btn-login {
+  background: var(--primary-gradient);
   border: none;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   color: white;
-}
-
-.btn-custom:hover {
-  opacity: 0.9;
-  color: white;
+  transition: all 0.3s;
 }
 
 .btn-custom-danger {
-  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
-  border: none;
-  color: white;
-}
-
-.btn-custom-danger:hover {
-  opacity: 0.9;
-  color: white;
+  background: var(--danger-gradient);
 }
 
 .btn-custom-actualizing {
@@ -83,7 +101,6 @@ body {
 
 .btn-click-effect {
   transition: all 0.2s ease;
-  transform: translateY(0);
 }
 
 .btn-click-effect:hover {
@@ -96,8 +113,69 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulários */
-.form-control:focus {
-  border-color: #6a11cb;
-  box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+/* ======================
+     COMPONENTES ESPECÍFICOS
+     ====================== */
+.avatar-img {
+  width: 40%;
+  max-width: 150px;
+  border: 3px solid #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+  padding: 2rem;
+  width: 33.33%;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #555;
+}
+
+.login-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-error-title,
+.login-error-subtitle {
+  background: var(--danger-gradient);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+
+.login-error-container {
+  text-align: center;
+  padding: 20px;
+  background: #fff3f3;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.login-redirect-message {
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ======================
+     RESPONSIVIDADE
+     ====================== */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90% !important;
+    margin-top: 15% !important;
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+  }
 }

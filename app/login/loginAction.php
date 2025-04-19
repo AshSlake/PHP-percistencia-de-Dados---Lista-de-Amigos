@@ -8,7 +8,7 @@
 require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\cabecalho.php'); // Inclui o cabeçalho HTML do sistema
 ?>
 
-<div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle">
+<div class="login-container">
     <?php
     // ==============================================
     // TRATAMENTO DOS DADOS DO FORMULÁRIO
@@ -52,15 +52,19 @@ require_once('C:\xampp\htdocs\etec ds\agenda #6\app\utils\cabecalho.php'); // In
          * @var string redirecionar para a pagina inicial*/
         header('location:http://localhost/etec%20ds/agenda%20%236/app/index.php');
     } else {
-        // Falha na autenticação
         echo '
-        <a href="http://localhost/etec%20ds/agenda%20%236/app/login/login.php">
-            <h1 class="w3-button w3-teal">Login inválido!</h1>
-            <h2 class="w3-button w3-teal">Verifique suas credenciais</h2>
-        </a>
+        <div class="login-error-container">
+            <h1 class="login-error-title">Login inválido!</h1>
+            <h2 class="login-error-subtitle">Verifique suas credenciais</h2>
+            <p class="login-redirect-message">Você será redirecionado em 3 segundos...</p>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "http://localhost/etec%20ds/agenda%20%236/app/login/login.php";
+            }, 3000);
+        </script>
         ';
     }
-
     // Fecha a conexão com o banco de dados
     $conexao->close();
     ?>
