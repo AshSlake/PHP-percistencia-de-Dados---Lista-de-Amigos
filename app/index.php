@@ -3,6 +3,15 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
+
+            <div class=" p-3 position-absolute top-0 start-0 m-3">
+                <form action="logout\logoutAction.php" method="post" class="btn-click-effect">
+                    <button name="btnLogout" class="btn btn-primary">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </form>
+            </div>
+
             <h1 class="display-4 fw-bold text-custom-primary mb-5">
                 Minha Lista de Amigos
             </h1>

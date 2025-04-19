@@ -20,6 +20,6 @@ if (!isset($_SESSION)) {
  * @location AcessoNegado.php Página para redirecionamento quando não autorizado
  */
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] != true) {
-    header('location:login/acessoNegado.php');
+    header('location:http://localhost/etec%20ds/agenda%20%236/app/login/acessoNegado.php');
     exit;
 }
